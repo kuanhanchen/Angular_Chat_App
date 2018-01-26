@@ -1,0 +1,26 @@
+<div class="container">
+  <div class="loginCard">
+    <form #loginForm="ngForm">
+    <h2 class="heading">Log In</h2>
+      <input
+        [(ngModel)]="email"
+        type="email" 
+        name="email"
+        placeholder="Enter your email address"
+        class="formInput" 
+        required />
+      <input type="password"
+        [(ngModel)]="password"
+        name="password" 
+        placeholder="Enter your password"
+        class="formInput"
+        required />
+      <button class="btn" 
+              id="btn-login" 
+              (click)="login()"
+              [disabled]="!loginForm.form.valid">
+              Log In
+      </button>
+    </form>
+  </div>
+</div>
